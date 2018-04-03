@@ -157,6 +157,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 Thankful to cjtterabytesoft [Donate Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LRLATZP493W46).
 Your Donation is Important to Further Develop Open Source Software.
 
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![Latest Unstable Version](https://poser.pugx.org/cjtterabytesoft/yii2-jvectormap/v/unstable)](https://packagist.org/packages/cjtterabytesoft/yii2-jvectormap)
 [![Total Downloads](https://poser.pugx.org/cjtterabytesoft/yii2-jvectormap/downloads)](https://packagist.org/packages/cjtterabytesoft/yii2-jvectormap)
 [![License](https://poser.pugx.org/cjtterabytesoft/yii2-jvectormap/license)](https://packagist.org/packages/cjtterabytesoft/yii2-jvectormap)
