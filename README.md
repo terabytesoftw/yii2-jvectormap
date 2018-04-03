@@ -7,6 +7,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/df658fa84a09592de2dc/maintainability)](https://codeclimate.com/github/cjtterabytesoft/yii2-jvectormap/maintainability)
 [![Dependency Status](https://www.versioneye.com/user/projects/5ac3f57a0fb24f0ac49c44f0/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5ac3f57a0fb24f0ac49c44f0)
 
+![yii2-jvectormap](docs/images/yii2-jvectormap.png)
+
 Installation:
 -------------
 
