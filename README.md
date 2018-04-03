@@ -149,6 +149,11 @@ The preferred way to install this extension is through [composer](http://getcomp
     Documentation Api: http://jvectormap.com/documentation/javascript-api/jvm-map/
 ```
 
+#### 3.- Added Maps:
+
+    3.1.- Map World Miller: [world_mill].
+    3.2.- Map World Mercator: [world_merc].
+
 Thankful to cjtterabytesoft [Donate Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LRLATZP493W46).
 Your Donation is Important to Further Develop Open Source Software.
 
