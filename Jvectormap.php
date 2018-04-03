@@ -48,7 +48,7 @@ class Jvectormap extends Widget
     public $backgroundColor;
 
     /** @var string [$focusOn] **/
-    public $focusOn =[];
+    public $focusOn = [];
 
     /** @var array [$labels] **/
     public $labels = [];
@@ -132,7 +132,7 @@ class Jvectormap extends Widget
                         !$this->backgroundColor ?: 'backgroundColor' =>
                             !$this->backgroundColor ?: $this->backgroundColor,
                         !$this->focusOn ?: 'focusOn' =>
-                            !$this->focusOn ?: $this->focusOn ,
+                            !$this->focusOn ?: $this->focusOn,
                         !$this->labels ?: 'labels' =>
                             !$this->labels ?: $this->labels,
                         !$this->markerLabelStyle ?: 'markerLabelStyle' =>
@@ -141,7 +141,7 @@ class Jvectormap extends Widget
                             !$this->markers ?: $this->markers,
                         'markersSelectable' => $this->markersSelectable,
                         'markersSelectableOne' => $this->markersSelectableOne,
-                        !$this->markerStyle ?:'markerStyle' =>
+                        !$this->markerStyle ?: 'markerStyle' =>
                             !$this->markerStyle ?: $this->markerStyle,
                         'panOnDrag' => $this->panOnDrag,
                         !$this->regionLabelStyle ?: '$regionLabelStyle' =>

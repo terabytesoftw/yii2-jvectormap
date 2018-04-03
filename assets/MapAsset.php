@@ -22,18 +22,16 @@ use yii\web\AssetBundle;
 class MapAsset extends AssetBundle
 {
 
-    private static $_maps=[];
+    private static $_maps = [];
 
     public $sourcePath = '@cjtterabytesoft/jvectormap/assets/maps/js/';
 
     public function registerAssetFiles($view)
     {
-        foreach (self::$_maps as $map){
+        foreach (self::$_maps as $map) {
             $jsname = "jquery-jvectormap-" . str_replace('_', '-', $map) . ".js";
             if (file_exists($this->sourcePath . "/" . $jsname)) {
                 $this->js[] = $jsname;
-            } else {
-                return true;
             }
         }
         parent::registerAssetFiles($view);
