@@ -9,17 +9,37 @@
 
 ![yii2-jvectormap](docs/images/yii2-jvectormap.png)
 
-Installation:
--------------
-
-The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
-
 Requirements:
 -------------
 
 [yii2-app-advanced](https://github.com/yiisoft/yii2-app-advanced/).
 
 [yii2-app-basic](https://github.com/yiisoft/yii2-app-basic/).
+
+Installation:
+-------------
+
+The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
+
+#### 1.- Installation:
+
+#####Linux:
+
+```
+    php composer.phar require --prefer-dist cjtterabytesoft/yii2-jvectormap "0.0.1.x-dev"
+```
+
+#####Windows:
+
+```
+    composer require --prefer-dist cjtterabytesoft/yii2-jvectormap "0.0.1.x-dev"
+```
+
+#####Or add to composer.json:
+
+```
+    "cjtterabytesoft/cjtterabytesoft/yii2-jvectormap": "0.0.1.x-dev"
+```
 
 Thankful to cjtterabytesoft [Donate Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LRLATZP493W46).
 Your Donation is Important to Further Develop Open Source Software.
