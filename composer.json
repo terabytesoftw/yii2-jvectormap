@@ -1,0 +1,44 @@
+{
+    "name": "cjtterabytesoft/yii2-jvectormap",
+    "description": "Widget: Yii2-jvectormap",
+    "type": "yii2-widgets",
+    "keywords": ["yii2", "Widgets","Map", "JVectorMap", "Jquery"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Wilmer Arambula",
+            "email": "cjtterabytellc@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.6.0",
+        "yiisoft/yii2": "~2.0.14"
+    },
+    "autoload": {
+        "psr-4": {
+            "cjtterabytesoft\\jvectormap\\": ""
+        }
+    },
+    "config": {
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "enabled": false
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "extra": {
+        "branch-alias": {
+          "dev-master": "0.0.1-dev"
+        },
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}
