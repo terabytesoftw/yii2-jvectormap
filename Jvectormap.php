@@ -68,8 +68,8 @@ class Jvectormap extends Widget
     /** @var boolean jvdefault js map **/
     public $maptype = false;
 
-    /** @var array [$config function Jquery.JVectorMap] **/
-    public $config = [];
+    /** @var string [$config function Jquery.JVectorMap] **/
+    public $config;
 
     /** @var string [$backgroundColor] **/
     public $backgroundColor;
