@@ -9,9 +9,9 @@
 *
 * @link: https://github.com/cjtterabytesoft/yii2-jvectormap
 * @author: Wilmer Arámbula <cjtterabytellc@gmail.com>
-* @copyright (c) CJT TERABYTE LLC
+* @copyright: (c) CJT TERABYTE LLC
 * @Widget: [yii2-jvectormap]
-* @Assets: [JVectorMapAsset]
+* @Assets: [MapCustomAsset]
 * @since: 0.0.1-dev
 **/
 
@@ -19,27 +19,13 @@ namespace cjtterabytesoft\jvectormap\assets;
 
 use yii\web\AssetBundle;
 
-class JvectormapAsset extends AssetBundle
+class MapcustomAsset extends AssetBundle
 {
 
-    public $sourcePath = '@cjtterabytesoft/jvectormap/assets/';
+    public $sourcePath = '@webroot/maps/js';
 
-    public $css = [
-        'css/jquery-jvectormap.css',
-    ];
+    public function registerAssetFiles($view)     {
+        parent::registerAssetFiles($view);
+    }
 
-    public $js = [
-        'js/jquery-jvectormap.min.js',
-    ];
-
-    public $publishOptions = [
-        'only' => [
-            'css/jquery-jvectormap.css',
-            'js/jquery-jvectormap.min.js',
-        ],
-    ];
-
-    public $depends = [
-        'yii\web\YiiAsset',
-    ];
 }

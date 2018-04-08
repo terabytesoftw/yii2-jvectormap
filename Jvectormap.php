@@ -12,20 +12,43 @@
 * @copyright: (c) CJT TERABYTE LLC
 * @Widget: [yii2-jvectormap]
 * @Library: [JVectorMap]
-* @since: 1.0
+* @since: 0.0.1-dev
 **/
 
 namespace cjtterabytesoft\jvectormap;
 
+
+use yii;
 use yii\helpers\Html;
-use yii\base\InvalidConfigException;
 use yii\helpers\Json;
 use yii\base\Widget;
 use cjtterabytesoft\jvectormap\assets\JvectormapAsset;
 use cjtterabytesoft\jvectormap\assets\MapAsset;
+use cjtterabytesoft\jvectormap\assets\MapcustomAsset;
 
 class Jvectormap extends Widget
 {
+    /** @var string jvpath js map **/
+    public $jvpath = '@cjtterabytesoft/jvectormap/assets/maps/js/';
+
+    /** @var string jvpathcustom js map **/
+    public $jvpathcustom = '@webroot/maps/js/';
+
+    /** @var string $jvname js map **/
+    public $jvname = 'jquery-jvectormap-';
+
+    /** @var integer $jverror js map **/
+    public $jverror = 0;
+
+    /** @var string $jvimage404 js map **/
+    public $jvimage404 = '/images/errors/404-map.png';
+
+    /** @var string $jvimage500 js map **/
+    public $jvimage500 = '/images/errors/500-map.png';
+
+    /** @var string bundle assets **/
+    public $bundle;
+
     /** @var string tag container **/
     public $tag = 'div';
 
@@ -40,6 +63,9 @@ class Jvectormap extends Widget
 
     /** @var string [$map] **/
     public $map;
+
+    /** @var boolean jvdefault js map **/
+    public $maptype = false;
 
     /** @var array [$config function Jquery.JVectorMap] **/
     public $config = [];
@@ -107,65 +133,98 @@ class Jvectormap extends Widget
     public function init()
     {
         parent::init();
-        if (empty($this->map)) {
-            throw new InvalidConfigException("The 'Map' option is required.");
-        }
         if (empty($this->id)) {
             $this->id = 'vmap';
+        }
+        $this->htmlOptions['id'] = $this->id;
+        $this->htmlOptions['style'] = $this->style;
+        if (empty($this->map)) {
+            $this->jverror = 1;
+            } else {
+                $this->MapJS();
         }
     }
 
     public function run()
     {
-        $view = $this->getView();
-
-        if ($this->id && $this->map) {
-            $this->htmlOptions['id'] = $this->id;
-            $this->htmlOptions['style'] = $this->style;
+        if ($this->jverror == 0) {
+            $this->config = Json::encode(
+                [
+                    'map' => str_replace('-', '_', $this->map),
+                    !$this->backgroundColor ?: 'backgroundColor' =>
+                        !$this->backgroundColor ?: $this->backgroundColor,
+                    !$this->focusOn ?: 'focusOn' =>
+                        !$this->focusOn ?: $this->focusOn,
+                    !$this->labels ?: 'labels' =>
+                        !$this->labels ?: $this->labels,
+                    !$this->markerLabelStyle ?: 'markerLabelStyle' =>
+                        !$this->markerLabelStyle ?: $this->markerLabelStyle,
+                    !$this->markers ?: 'markers' =>
+                        !$this->markers ?: $this->markers,
+                    'markersSelectable' => $this->markersSelectable,
+                    'markersSelectableOne' => $this->markersSelectableOne,
+                    !$this->markerStyle ?: 'markerStyle' =>
+                        !$this->markerStyle ?: $this->markerStyle,
+                    'panOnDrag' => $this->panOnDrag,
+                    !$this->regionLabelStyle ?: '$regionLabelStyle' =>
+                        !$this->regionLabelStyle ?: $this->regionLabelStyle,
+                    'regionsSelectable' => $this->regionsSelectable,
+                    'regionsSelectableOne' => $this->regionsSelectableOne,
+                    !$this->selectedMarkers ?: 'selectedMarkers' =>
+                        !$this->selectedMarkers ?: $this->selectedMarkers,
+                    !$this->selectedRegions ?: 'selectedRegions' =>
+                        !$this->selectedRegions ?: $this->selectedRegions,
+                    !$this->regionStyle ?: 'regionStyle' =>
+                        !$this->regionStyle ?: $this->regionStyle,
+                    !$this->series ?: 'series' =>
+                        !$this->series ?: $this->series,
+                    'zoomAnimate' => $this->zoomAnimate,
+                    !$this->zoomMax ?: 'zoomMax' =>
+                        !$this->zoomMax ?: $this->zoomMax,
+                    !$this->zoomMin ?: 'zoomMin' =>
+                        !$this->zoomMin ?: $this->zoomMin,
+                    'zoomOnScroll' => $this->zoomOnScroll,
+                ]
+            );
             echo Html::beginTag($this->tag, $this->htmlOptions);
-                JvectormapAsset::register($view);
-                MapAsset::map($this->map);
-                MapAsset::register($view);
-                $this->config = Json::encode(
-                    [
-                        'map'=>str_replace('-', '_', $this->map),
-                        !$this->backgroundColor ?: 'backgroundColor' =>
-                            !$this->backgroundColor ?: $this->backgroundColor,
-                        !$this->focusOn ?: 'focusOn' =>
-                            !$this->focusOn ?: $this->focusOn,
-                        !$this->labels ?: 'labels' =>
-                            !$this->labels ?: $this->labels,
-                        !$this->markerLabelStyle ?: 'markerLabelStyle' =>
-                            !$this->markerLabelStyle ?: $this->markerLabelStyle,
-                        !$this->markers ?: 'markers' =>
-                            !$this->markers ?: $this->markers,
-                        'markersSelectable' => $this->markersSelectable,
-                        'markersSelectableOne' => $this->markersSelectableOne,
-                        !$this->markerStyle ?: 'markerStyle' =>
-                            !$this->markerStyle ?: $this->markerStyle,
-                        'panOnDrag' => $this->panOnDrag,
-                        !$this->regionLabelStyle ?: '$regionLabelStyle' =>
-                            !$this->regionLabelStyle ?: $this->regionLabelStyle,
-                        'regionsSelectable' => $this->regionsSelectable,
-                        'regionsSelectableOne' => $this->regionsSelectableOne,
-                        !$this->selectedMarkers ?: 'selectedMarkers' =>
-                            !$this->selectedMarkers ?: $this->selectedMarkers,
-                        !$this->selectedRegions ?: 'selectedRegions' =>
-                            !$this->selectedRegions ?: $this->selectedRegions,
-                        !$this->regionStyle ?: 'regionStyle' =>
-                            !$this->regionStyle ?: $this->regionStyle,
-                        !$this->series ?: 'series' =>
-                            !$this->series ?: $this->series,
-                        'zoomAnimate' => $this->zoomAnimate,
-                        !$this->zoomMax ?: 'zoomMax' =>
-                            !$this->zoomMax ?: $this->zoomMax,
-                        !$this->zoomMin ?: 'zoomMin' =>
-                            !$this->zoomMin ?: $this->zoomMin,
-                        'zoomOnScroll' => $this->zoomOnScroll,
-                    ]
-                );
             echo Html::endTag($this->tag);
+            Yii::$app->view->registerJs("jQuery('#{$this->id}').vectorMap($this->config)");
+            } else {
+                $this->ErrorMap();
         }
-        $view->registerJs("jQuery('#{$this->id}').vectorMap($this->config);");
+    }
+
+    public function MapJS() {
+        $this->jvname = $this->jvname . str_replace('_', '-', $this->map) . ".js";
+        if (file_exists(yii::getAlias((!$this->maptype ? $this->jvpath : $this->jvpathcustom) . $this->jvname))) {
+            JvectormapAsset::register(Yii::$app->view);
+            $this->bundle = !$this->maptype ? MapAsset::register(Yii::$app->view) :
+                MapcustomAsset::register(Yii::$app->view);
+            $this->bundle->js[] = $this->jvname; // dynamic map added
+            $this->bundle->publishOptions[] = [
+                'only' => [
+                    yii::getalias((!$this->maptype ? $this->jvpath : $this->jvpathcustom) . $this->jvname),
+                ]
+            ];
+            } else {
+                $this->jverror = 2;
+        }
+    }
+
+    public function ErrorMap() {
+        switch ($this->jverror) {
+            case 1:
+                echo Html::beginTag($this->tag, $this->htmlOptions);
+                echo Html::img($this->jvimage500, $options = ['alt' => '500 - The Map Option is Required.',
+                    'style' => 'max-width:100%;width:100%;']);
+                echo Html::endTag($this->tag);
+                break;
+            case 2:
+                echo Html::beginTag($this->tag, $this->htmlOptions);
+                    echo Html::img($this->jvimage404, $options = ['alt' => '404 - Map Not Found',
+                        'style' => 'max-width:100%;width:100%;']);
+                echo Html::endTag($this->tag);
+                break;
+        }
     }
 }

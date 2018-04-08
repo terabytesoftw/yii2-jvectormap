@@ -33,6 +33,7 @@
         }
     ],
     "extra": {
+        "bootstrap": "cjtterabytesoft\\jvectormap\\Bootstrap",
         "branch-alias": {
           "dev-master": "0.0.1-dev"
         },
