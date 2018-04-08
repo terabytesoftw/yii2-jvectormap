@@ -25,3 +25,4 @@ Your Donation is Important to Further Develop Open Source Software.
 [![Latest Unstable Version](https://poser.pugx.org/cjtterabytesoft/yii2-jvectormap/v/unstable)](https://packagist.org/packages/cjtterabytesoft/yii2-jvectormap)
 [![Total Downloads](https://poser.pugx.org/cjtterabytesoft/yii2-jvectormap/downloads)](https://packagist.org/packages/cjtterabytesoft/yii2-jvectormap)
 [![License](https://poser.pugx.org/cjtterabytesoft/yii2-jvectormap/license)](https://packagist.org/packages/cjtterabytesoft/yii2-jvectormap)
+
