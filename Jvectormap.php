@@ -47,8 +47,8 @@ class Jvectormap extends Widget
     /** @var string $jvimage500 js map **/
     public $jvimage500 = '/images/errors/500-map.png';
 
-    /** @var array bundle assets **/
-    public $bundle = [];
+    /** AssetBundle Dinamic **/
+    public $bundle;
 
     /** @var string tag container **/
     public $tag = 'div';
