@@ -19,6 +19,7 @@ namespace cjtterabytesoft\jvectormap;
 
 
 use yii;
+use yii\helpers\BaseFileHelper;
 use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\base\Widget;
@@ -133,6 +134,10 @@ class Jvectormap extends Widget
     public function init()
     {
         parent::init();
+        if (!file_exists(\Yii::getAlias('@webroot/images/errors/'))) {
+            BaseFileHelper::copyDirectory(\Yii::getAlias('@cjtterabytesoft/jvectormap/images/errors'),
+                \Yii::getAlias('@frontend/web/images/errors'));
+        }
         if (empty($this->id)) {
             $this->id = 'vmap';
         }
