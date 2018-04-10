@@ -8,7 +8,6 @@
 [![Known Vulnerabilities](https://snyk.io/package/npm/name/badge.svg)](images/snyk/snyk-test.png)
 
 ![yii2-jvectormap](images/maps/yii2-jvectormap.png)
-![yii2-jvectormap](images/maps/yii2-jvectormap.png)
 
 Requirements:
 -------------
