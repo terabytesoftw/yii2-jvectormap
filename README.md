@@ -8,6 +8,7 @@
 [![Known Vulnerabilities](https://snyk.io/package/npm/name/badge.svg)](images/snyk/snyk-test.png)
 
 ![yii2-jvectormap](images/maps/yii2-jvectormap.png)
+![yii2-jvectormap](images/maps/yii2-jvectormap.png)
 
 Requirements:
 -------------
@@ -24,6 +25,22 @@ Installation:
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
 [Installation Instructions.](docs/getting-started.md) 
+
+Maps Included:
+-------------
+
+Miller Cylindrical Projection:
+
+- World Map.
+    JS: jquery-jvectormap-world-mill.js.
+    Name: world_mill.
+
+Mercator Projection:
+
+- World Map.
+    JS: jquery-jvectormap-world-merc.js.
+    Name: world_merc.
+
 
 Thankful to cjtterabytesoft [Donate Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LRLATZP493W46).
 Your Donation is Important to Further Develop Open Source Software.
