@@ -1,7 +1,7 @@
 {
     "name": "cjtterabytesoft/yii2-jvectormap",
     "description": "Widget: Yii2-jvectormap",
-    "type": "yii2-widgets",
+    "type": "yii2-extension",
     "keywords": ["yii2", "Widgets","Map", "JVectorMap", "Jquery"],
     "license": "Apache-2.0",
     "authors": [
