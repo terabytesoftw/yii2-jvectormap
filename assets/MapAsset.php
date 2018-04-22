@@ -15,14 +15,14 @@
 * @since: 0.0.1-dev
 **/
 
-namespace cjtterabytesoft\jvectormap\assets;
+namespace cjtterabytesoft\widget\jvectormap\assets;
 
 use yii\web\AssetBundle;
 
 class MapAsset extends AssetBundle
 {
     
-    public $sourcePath = "@cjtterabytesoft/jvectormap/assets/maps/js";
+    public $sourcePath = "@cjtterabytesoft/widget/jvectormap/assets/maps/js";
 
     public function registerAssetFiles($view)     {
         parent::registerAssetFiles($view);

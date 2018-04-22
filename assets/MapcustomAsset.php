@@ -15,11 +15,11 @@
 * @since: 0.0.1-dev
 **/
 
-namespace cjtterabytesoft\jvectormap\assets;
+namespace cjtterabytesoft\widget\jvectormap\assets;
 
 use yii\web\AssetBundle;
 
-class MapcustomAsset extends AssetBundle
+class MapCustomAsset extends AssetBundle
 {
 
     public $sourcePath = '@webroot/maps/js';

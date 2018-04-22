@@ -1,9 +1,9 @@
 <?php
 
 /**
-* This file is part of the CJTTERABYTESOFT yii2-widgets
+* This file is part of the CJTTERABYTESOFT yii2-jvectormap
 *
-* (c) CJT TERABYTE LLC yii2-extension <https://github.com/cjtterabytesoft/yii2-jvectormap>
+* (c) CJT TERABYTE LLC yii2-widget <https://github.com/cjtterabytesoft/yii2-jvectormap>
 * For the full copyright and license information, please view the LICENSE.md
 * file that was distributed with this source code
 *
@@ -11,26 +11,26 @@
 * @author: Wilmer Arámbula <cjtterabytellc@gmail.com>
 * @copyright: (c) CJT TERABYTE LLC
 * @Widget: [yii2-jvectormap]
-* @Library: [JVectorMap]
+* @Library: [JvectorMap]
 * @since: 0.0.1-dev
 **/
 
-namespace cjtterabytesoft\jvectormap;
+namespace cjtterabytesoft\widget\jvectormap;
 
-
+use cjtterabytesoft\jvectormap\assets\JvectorMapAsset;
+use cjtterabytesoft\jvectormap\assets\MapAsset;
+use cjtterabytesoft\jvectormap\assets\MapCustomAsset;
 use yii;
+use yii\base\Widget;
 use yii\helpers\BaseFileHelper;
 use yii\helpers\Html;
 use yii\helpers\Json;
-use yii\base\Widget;
-use cjtterabytesoft\jvectormap\assets\JvectormapAsset;
-use cjtterabytesoft\jvectormap\assets\MapAsset;
-use cjtterabytesoft\jvectormap\assets\MapcustomAsset;
 
-class Jvectormap extends Widget
+
+class JvectorMap extends Widget
 {
     /** @var string jvpath js map **/
-    public $jvpath = '@cjtterabytesoft/jvectormap/assets/maps/js/';
+    public $jvpath = '@cjtterabytesoft/widget/jvectormap/assets/maps/js/';
 
     /** @var string jvpathcustom js map **/
     public $jvpathcustom = '@webroot/maps/js/';
@@ -135,7 +135,7 @@ class Jvectormap extends Widget
     {
         parent::init();
         if (!file_exists(\Yii::getAlias('@webroot/images/errors/'))) {
-            BaseFileHelper::copyDirectory(\Yii::getAlias('@cjtterabytesoft/jvectormap/images/errors'),
+            BaseFileHelper::copyDirectory(\Yii::getAlias('@cjtterabytesoft/widget/jvectormap/images/errors'),
                 \Yii::getAlias('@frontend/web/images/errors'));
         }
         if (empty($this->id)) {
@@ -146,7 +146,7 @@ class Jvectormap extends Widget
         if (empty($this->map)) {
             $this->jverror = 1;
             } else {
-                $this->MapJS();
+                $this->MapJs();
         }
     }
 
@@ -199,12 +199,12 @@ class Jvectormap extends Widget
         }
     }
 
-    public function MapJS() {
+    public function MapJs() {
         $this->jvname = $this->jvname . str_replace('_', '-', $this->map) . ".js";
         if (file_exists(yii::getAlias((!$this->maptype ? $this->jvpath : $this->jvpathcustom) . $this->jvname))) {
-            JvectormapAsset::register(Yii::$app->view);
+            JvectorMapAsset::register(Yii::$app->view);
             $this->bundle = !$this->maptype ? MapAsset::register(Yii::$app->view) :
-                MapcustomAsset::register(Yii::$app->view);
+                MapCustomAsset::register(Yii::$app->view);
             $this->bundle->js[] = $this->jvname; // dynamic map added
             $this->bundle->publishOptions[] = [
                 'only' => [

@@ -31,22 +31,22 @@ Getting Started with Widget - yii2-jvectormap.
 <?php
 
 /**
-* This file is part of the CJTTERABYTESOFT yii2-extension.
+* This file is part of the CJTTERABYTESOFT yii2-jvectormap
 *
-* (c) CJT TERABYTE LLC yii2-extension <http://github.com/cjtterabytesoft>
+* (c) CJT TERABYTE LLC yii2-widget <https://github.com/cjtterabytesoft/yii2-jvectormap>
 * For the full copyright and license information, please view the LICENSE.md
-* file that was distributed with this source code.
+* file that was distributed with this source code
 *
-* @link http://www.tusoporte.net
-* @author Wilmer Arámbula <cjtterabytellc@gmail.com>
-* @copyright (c) CJT TERABYTE LLC.
-* @Extension: [yii2-dashboard-adminator].
-* @Layout [Plugin_JvectorMaps].
-* @since 1.0
+* @link: https://github.com/cjtterabytesoft/yii2-jvectormap
+* @author: Wilmer Arámbula <cjtterabytellc@gmail.com>
+* @copyright (c) CJT TERABYTE LLC
+* @Widget: [yii2-jvectormap]
+* @Layout [Plugin_JvectorMaps]
+* @since: 0.0.1-dev
 **/
 
+use cjtterabytesoft\widget\jvectormap\JvectorMap;
 use yii\helpers\Html;
-use cjtterabytesoft\jvectormap\Jvectormap;
 
 ?>
 
@@ -57,7 +57,7 @@ use cjtterabytesoft\jvectormap\Jvectormap;
             <?= Html::tag('h6', html::encode(Yii::t('adminator','Site Visits')), ['class' => 'lh-1']) ?>
         <?= Html::endTag('div') ?>
         <?= Html::beginTag('div', ['class' => 'layer w-100']) ?>
-            <?= Jvectormap::widget([
+            <?= JvectorMap::widget([
                 /** [div container] **/
                 'id' => 'vmap',
                 'style' => [
@@ -168,22 +168,22 @@ use cjtterabytesoft\jvectormap\Jvectormap;
 <?php
 
 /**
-* This file is part of the CJTTERABYTESOFT yii2-extension
+* This file is part of the CJTTERABYTESOFT yii2-jvectormap
 *
-* (c) CJT TERABYTE LLC yii2-extension <http://github.com/cjtterabytesoft>
+* (c) CJT TERABYTE LLC yii2-widget <https://github.com/cjtterabytesoft/yii2-jvectormap>
 * For the full copyright and license information, please view the LICENSE.md
 * file that was distributed with this source code
 *
 * @link http://www.tusoporte.net
 * @author Wilmer Arámbula <cjtterabytellc@gmail.com>
-* @copyright (c) CJT TERABYTE LLC.
-* @Extension: [yii2-dashboard-adminator]
+* @copyright (c) CJT TERABYTE LLC
+* @Widget: [yii2-jvectormap]
 * @Layout [Vector_Maps]
-* @since 1.0
+* @since: 0.0.1-dev
 **/
 
+use cjtterabytesoft\widget\jvectormap\JvectorMap;
 use yii\helpers\Html;
-use cjtterabytesoft\jvectormap\Jvectormap;
 
 ?>
 
@@ -198,7 +198,7 @@ use cjtterabytesoft\jvectormap\Jvectormap;
                     <?= Html::tag('h6', html::encode(Yii::t('adminator',
                         'Maps Custom: Colombia Miller Cylindrical Projection.')),
                         ['class' => 'c-grey-900 mT-10 mB-30']) ?>
-                    <?= Jvectormap::widget([
+                    <?= JvectorMap::widget([
                         /** [div container] **/
                         'id' => 'vmap',
                         'style' => [

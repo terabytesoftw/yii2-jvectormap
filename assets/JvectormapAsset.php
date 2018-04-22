@@ -15,14 +15,14 @@
 * @since: 0.0.1-dev
 **/
 
-namespace cjtterabytesoft\jvectormap\assets;
+namespace cjtterabytesoft\widget\jvectormap\assets;
 
 use yii\web\AssetBundle;
 
-class JvectormapAsset extends AssetBundle
+class JvectorMapAsset extends AssetBundle
 {
 
-    public $sourcePath = '@cjtterabytesoft/jvectormap/assets/';
+    public $sourcePath = '@cjtterabytesoft/widget/jvectormap/assets/';
 
     public $css = [
         'css/jquery-jvectormap.css',
