@@ -6,7 +6,7 @@
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/cjtterabytesoft/yii2-jvectormap/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 [![Maintainability](https://api.codeclimate.com/v1/badges/df658fa84a09592de2dc/maintainability)](https://codeclimate.com/github/cjtterabytesoft/yii2-jvectormap/maintainability)
 [![Known Vulnerabilities](https://snyk.io/package/npm/name/badge.svg)](images/snyk/snyk-test.png)
-![yii2-jvectormap](https://raw.githubusercontent.com/cjtterabytesoft/yii2-jvectormap/b2d27e2ec6821da1238028572b6da84bff89b9cf/images/maps/yii2-jvectormap.png)
+![yii2-jvectormap](https://lh5.googleusercontent.com/_PRRuF1QmnMw80PSee6xeWGS7pM5VdhJaqv85efnboyELk-dpPBJ9lvBBlhYZfnXNx7cOnoYoc6Rs3RwJT3L=w1440-h769)
 
 Requirements:
 -------------
