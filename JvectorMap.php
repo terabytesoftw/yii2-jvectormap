@@ -17,9 +17,9 @@
 
 namespace cjtterabytesoft\widget\jvectormap;
 
-use cjtterabytesoft\jvectormap\assets\JvectorMapAsset;
-use cjtterabytesoft\jvectormap\assets\MapAsset;
-use cjtterabytesoft\jvectormap\assets\MapCustomAsset;
+use cjtterabytesoft\widget\jvectormap\assets\JvectorMapAsset;
+use cjtterabytesoft\widget\jvectormap\assets\MapAsset;
+use cjtterabytesoft\widget\jvectormap\assets\MapCustomAsset;
 use yii;
 use yii\base\Widget;
 use yii\helpers\BaseFileHelper;
