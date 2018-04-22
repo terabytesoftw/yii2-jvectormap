@@ -6,8 +6,6 @@
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/cjtterabytesoft/yii2-jvectormap/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 [![Maintainability](https://api.codeclimate.com/v1/badges/df658fa84a09592de2dc/maintainability)](https://codeclimate.com/github/cjtterabytesoft/yii2-jvectormap/maintainability)
 [![Known Vulnerabilities](https://snyk.io/package/npm/name/badge.svg)](images/snyk/snyk-test.png)
-[![Yii2](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat)](https://www.yiiframework.com/)
-
 ![yii2-jvectormap](images/maps/yii2-jvectormap.png)
 
 Requirements:
@@ -48,5 +46,6 @@ Your Donation is Important to Further Develop Open Source Software.
 [![Latest Unstable Version](https://poser.pugx.org/cjtterabytesoft/yii2-jvectormap/v/unstable)](https://packagist.org/packages/cjtterabytesoft/yii2-jvectormap)
 [![Total Downloads](https://poser.pugx.org/cjtterabytesoft/yii2-jvectormap/downloads)](https://packagist.org/packages/cjtterabytesoft/yii2-jvectormap)
 [![License](https://poser.pugx.org/cjtterabytesoft/yii2-jvectormap/license)](https://packagist.org/packages/cjtterabytesoft/yii2-jvectormap)
-[![Powered by cjtterabytesoft](https://github.com/cjtterabytesoft/yii2-jvectormap/tree/master/badges/cjtterabytesoft.png)](images/badges/cjtterabytesoft.png)
+[![Yii2](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat)](https://www.yiiframework.com/)
+![Powered by cjtterabytesoft](images/badges/cjtterabytesoft.png)
 
