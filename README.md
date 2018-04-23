@@ -7,7 +7,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/df658fa84a09592de2dc/maintainability)](https://codeclimate.com/github/cjtterabytesoft/yii2-jvectormap/maintainability)
 [![Known Vulnerabilities](https://snyk.io/package/npm/name/badge.svg)](images/snyk/snyk-test.png)
 
-![yii2-jvectormap](https://lh5.googleusercontent.com/_PRRuF1QmnMw80PSee6xeWGS7pM5VdhJaqv85efnboyELk-dpPBJ9lvBBlhYZfnXNx7cOnoYoc6Rs3RwJT3L=w1440-h769)
+![yii2-jvectormap](https://yiipowered.com/img/project/497/859_full.png?1523403821)
 
 Requirements:
 -------------
